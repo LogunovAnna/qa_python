@@ -46,13 +46,13 @@ class TestBooksCollector:
 
     def test_get_books_with_specific_rating_add_two_books_one_book_received(self):
         # тест метода get_books_with_specific_rating
-        # создаем 3 экземпляра, один из них с рейтингом 3. Проверяем, что метод вернул только один элемента
+        # создаем 2 экземпляра, один из них с рейтингом 3. Проверяем, что метод вернул только один элемент
         collector = BooksCollector()
 
         collector.add_new_book('Однорукий аплодисмент')
-        collector.add_new_book('Когда бог был кроликом')
+        collector.add_new_book('Шампиньон моей жизни')
         collector.set_book_rating('Однорукий аплодисмент', 3)
-
+        collector.set_book_rating('Шампиньон моей жизни', 5)
         assert 'Однорукий аплодисмент' in collector.get_books_with_specific_rating(3)
 
     def test_get_books_rating_add_one_book_one_book_received(self):
