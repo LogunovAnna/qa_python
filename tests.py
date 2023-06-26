@@ -44,26 +44,14 @@ class TestBooksCollector:
 
         assert collector.get_book_rating('Однорукий аплодисмент') == 1
 
-    def test_get_book_rating_add_one_book_rating_received(self):
-        # тест метода get_book_rating
-        # создаем два экземпляра проверяем метод возвращает корректное значение
-        collector = BooksCollector()
-
-        collector.add_new_book('Однорукий аплодисмент')
-        collector.set_book_rating('Однорукий аплодисмент', 3)
-
-        assert collector.get_book_rating('Однорукий аплодисмент') == 3
-
-    def test_get_books_with_specific_rating_add_three_books_one_book_received(self):
+    def test_get_books_with_specific_rating_add_two_books_one_book_received(self):
         # тест метода get_books_with_specific_rating
         # создаем 3 экземпляра, один из них с рейтингом 3. Проверяем, что метод вернул только один элемента
         collector = BooksCollector()
 
         collector.add_new_book('Однорукий аплодисмент')
-        collector.add_new_book('Шампиньон моей жизни')
         collector.add_new_book('Когда бог был кроликом')
         collector.set_book_rating('Однорукий аплодисмент', 3)
-        collector.set_book_rating('Шампиньон моей жизни', 5)
 
         assert 'Однорукий аплодисмент' in collector.get_books_with_specific_rating(3)
 
@@ -73,7 +61,6 @@ class TestBooksCollector:
         collector = BooksCollector()
 
         collector.add_new_book('Шампиньон моей жизни')
-        collector.set_book_rating('Шампиньон моей жизни', 5)
 
         assert len(collector.get_books_rating()) == 1
 

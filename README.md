@@ -11,9 +11,7 @@ test_set_book_rating_add_value_three_rating_changed - тест метода set_
 
 test_set_book_rating_add_value_zero_rating_not_changed - негативный тест метода set_book_rating присваеваем значение 0 ОР рейтинг не изменится
 
-test_get_book_rating_add_one_book_rating_received - тест метода get_boos_rating создаем элемент ОР рейтинг книги совпадает со значением в справочнике
-
-test_get_books_with_specific_rating_add_three_books_one_book_received - тест метода get_books_with_specific_rating создаем три элемента ОР получаем книгу рейтинг которой равен заданному
+test_get_books_with_specific_rating_add_two_books_one_book_received - тест метода get_books_with_specific_rating создаем два элемента ОР получаем книгу рейтинг которой равен заданному
 
 test_get_books_rating_add_one_book_one_book_received - тест метода get_books_rating создаем элемент ОР метод возвращает словарь длиной 1
 
